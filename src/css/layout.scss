@@ -49,4 +49,9 @@ li{
             width:100%;
         }
     }
+
+    .section{
+        height: calc(100vh - 120px);
+        min-height:800px;
+    }
 }
