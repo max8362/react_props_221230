@@ -1,3 +1,5 @@
+import Scrollspy from "react-scrollspy";
+
 function Navi(){
     const naviDb = [{
                       naviText : "포트폴리오",
@@ -13,7 +15,8 @@ function Navi(){
                                     }
                     ]
     return(
-      <ul className="d-flex mb-0">
+        <Scrollspy className="d-flex mb-0 gnb_ul" items={[naviDb[0].naviLink,naviDb[1].naviLink,naviDb[2].naviLink] } currentClassName="is-current">
+     
         {
           naviDb.map((item, index) =>{
             return(
@@ -23,7 +26,7 @@ function Navi(){
           )
             
         }
-      </ul>
+      </Scrollspy>
     )
   }
 

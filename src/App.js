@@ -10,12 +10,12 @@ import Header from './component/Hd';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" id="top">
       <Header></Header>
-
       <Worksswiper></Worksswiper>
-      
-      <Preinterview></Preinterview>
+      <Preinterview contentid="portfolio"></Preinterview>      
+      <Preinterview contentid="me"></Preinterview>
+      <Preinterview contentid="preInterview"></Preinterview>
       <Footer></Footer>
     </div>
   );
@@ -74,7 +74,7 @@ const Worksswiper = () => {
     )
 }
 
-const Preinterview = () => {
+const Preinterview = (props) => {
   const interviewjson = [{
     subject : '코딩보다 이게 더 어려워',
     content : '일단 만나봅시다! 사장'
@@ -87,7 +87,8 @@ const Preinterview = () => {
   }]
 
   return(
-    <section className="section py-5 text-center">
+    
+    <section className="section py-5 text-center" id={props.contentid}>
         <h3>규칙위에 틀을 깨는 개발자가 되겠습니다.</h3>
         <div className="py-5 container-md text-start">
           <ul>
