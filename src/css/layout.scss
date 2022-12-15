@@ -1,3 +1,8 @@
+*{
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 300;
+    letter-spacing: -0.083em;
+}
 li{
     list-style: none;
 }
@@ -8,5 +13,40 @@ li{
     }
     a:hover{
         color:rgb(227, 96, 73);
+    }
+
+    h1{
+        max-width:9.5rem;
+    }
+
+    .workSection{
+        .swiper-wrapper{
+             .swiper-slide{
+                min-height: calc(100vh - 120px);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+             }
+             .react{
+                background:url(https://img.cjthemarket.com/images/file/display/586/20221122103138241.jpg?RS=1920x500) no-repeat center;
+                background-size: cover;
+                color:white;
+                @media (max-width:768px) {
+                    background-image: url(https://img.cjthemarket.com/images/file/display/084/20220901181851256.png?RS=1920x500);
+                    
+                }
+             }
+             .boot{
+
+             }
+        }
+        .swiper-scrollbar-horizontal{
+            height: 2px;
+            bottom:0;
+            left:0;
+            right:0;
+            width:100%;
+        }
     }
 }

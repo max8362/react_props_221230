@@ -5,18 +5,14 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
+import Header from './component/Hd';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header d-flex justify-content-between align-items-center px-lg-5">
-        <h1 className="mb-0">
-          <a href="" className="d-block">
-            <img src="./img/logo.svg" className="img-fluid w-100" alt="logo" />
-          </a>
-        </h1>
-        <Navi></Navi>        
-      </header>
+      <Header></Header>
+
       <Worksswiper></Worksswiper>
       <Preinterview></Preinterview>
       <Footer></Footer>
@@ -24,44 +20,37 @@ function App() {
   );
 }
 
-function Navi(){
-  const naviDb = [{
-                    naviText : "포트폴리오",
-                    naviLink : "#portfolio"
-                  },
-                  {
-                    naviText : "인물탐방",
-                    naviLink : "#me"
-                                  },
-                  {
-                    naviText : "사전인터뷰 및 제안",
-                    naviLink : "#preInterview"
-                                  }
-                  ]
-  return(
-    <ul className="d-flex ">
-      {
-        naviDb.map((item, index) =>{
-          return(
-            <li id={ 'naivID'+index }><a href={item.naviLink} className="text-decoration-none">{item.naviText}</a></li>
-          )
-        }
-        )
-          
-      }
-    </ul>
-  )
-}
 
 const Worksswiper = () => {
+  const swiperinfo = [{
+          worktitle : '리액트광고웹앱',
+          worktime : '4주',
+          co : '단독작업',
+          app : ['illust','photoshop','v-code'],
+          cls : 'react'
+        },
+        {
+          worktitle : '부트스트랩 퍼블리싱',
+          worktime : '1주',
+          co : '단독작업',
+          app : ['v-code'],
+          cls : 'boot'
+        },
+        {
+          worktitle : 'CMS 그누보드',
+          worktime : '4주',
+          co : '단독작업',
+          app : ['illust','photoshop','v-code'],
+          cls : 'sir'
+        }];
     return(
-      <Swiper
+      <Swiper className='workSection'
       modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
       spaceBetween={0}
       slidesPerView={1}
-      navigation
+      
       autoplay={{
-        delay: 2500,
+        delay: 4000,
         disableOnInteraction: false,
       }}
       pagination={{ clickable: true }}
@@ -69,10 +58,16 @@ const Worksswiper = () => {
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
        >
-          <SwiperSlide>Slide 1</SwiperSlide>
-          <SwiperSlide>Slide 2</SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>     
+        {
+          swiperinfo.map( ( item, index ) => {
+                 return(
+                  <SwiperSlide className={item.cls} >{item.worktitle}</SwiperSlide>
+                 )
+            }
+          )
+          
+        }
+           
       </Swiper>
     )
 }
