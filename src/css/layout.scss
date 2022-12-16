@@ -7,6 +7,7 @@ li{
     list-style: none;
 }
 .h100vh{ height: 100vh;}
+
 #root{
     a{
         color:black
@@ -17,8 +18,55 @@ li{
 
     h1{
         max-width:9.5rem;
-    }
+        svg{
+            height:2.8rem;
+            transform: translateY(-30%);
+            transform-origin: center;
+            transition: 0.5s;
+            #blackIcon{
+                transform: translateY(-200%);
+                transition: 0.5s;
+            }
+            #deaback{
+                transform: translateY(-200%);
+                transition: 0.5s;
+            }
 
+        }
+
+    }
+    
+
+    #hd{
+        background-color: white;
+        &.scroll{
+            background-color: rgba(0,0,0,.5);
+           
+            a{
+                color:white;
+            }
+            h1 svg{
+                transform: translateY(0);
+                g{
+                    g{ fill: white;}
+                }
+                
+                #blackIcon{
+                    transform: translateY(0);
+                }
+                #deaback{
+                    transform: translateY(0);
+                }
+
+            }
+            
+
+        }
+        #allMenu{
+            font-weight: 500;
+        }
+        
+    }
     .workSection{
         .swiper-wrapper{
              .swiper-slide{
