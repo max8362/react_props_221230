@@ -1,4 +1,4 @@
-import swiperDBlink from '../data/swiperinof.json';
+import swiperDBlink from '../json/swiperinof.json';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 
