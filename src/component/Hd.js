@@ -14,6 +14,7 @@ import Navi from './Navi';
 
 
 function Header(props){
+  
   const targetRef = useRef(null); 
   const [menuToggle, menuToggleSet ] = useState(true); 
   
@@ -36,7 +37,7 @@ function Header(props){
       clearInterval(timer); //setInterval 지우기
       window.removeEventListener("scroll", handleScroll); // scroll 이벤트 지우기
     };
-  }, []);
+  }, []); // 한번실행
 
     return(
         <header ref={targetRef} id="hd" 
@@ -52,10 +53,10 @@ function Header(props){
           <button className='btn d-md-none' id="allMenu" onClick={ e => {               
             menuToggleSet(!menuToggle);
             const  gnbulclass =  menuToggle ?  'mobileGnb': 'pcGnb';   
-            console.log(gnbulclass)
+            
           }} >햄버거</button>          
-         
-          <Navi  />
+          
+         <Navi   />
         </header>
     )
   }
