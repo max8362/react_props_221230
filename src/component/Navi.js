@@ -1,10 +1,10 @@
 import naviDBlink from '../json/navidb.json';
 import Scrollspy from "react-scrollspy";
 
-function Navi(){
+function Navi(props){
     const naviDb = naviDBlink.naviDB;
     return(
-        <Scrollspy className="d-flex mb-0 gnb_ul " items={[naviDb[0].naviLink,naviDb[1].naviLink,naviDb[2].naviLink] } currentClassName="is-current">
+        <Scrollspy className={ 'd-md-flex mb-0 gnb_ul ' + props.cls + ' ' + props.toggle } items={[naviDb[0].naviLink,naviDb[1].naviLink,naviDb[2].naviLink] } currentClassName="is-current">
      
         {
           naviDb.map((item, index) =>{
