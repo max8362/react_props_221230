@@ -1,38 +1,41 @@
 import swiperDBlink from '../json/swiperinof.json';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay} from 'swiper';
 
-const Worksswiper = () => {
-    const swiperinfo = swiperDBlink.portfolio;
+const Worksswiper = (props) => {
+    const swiperinfo = swiperDBlink[props.section];
+
       return(
-        <Swiper className='workSection'
+        <div>
+        <h3>{props.title}</h3>
+        <Swiper className='workSection' id={props.contentid}
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-        spaceBetween={0}
-        slidesPerView={1.5}
+        slidesPerView={props.sview}
         centeredSlides={true}
-        autoplay={{
-          delay: 4000,
-          disableOnInteraction: false,
-        }}
-        loop = {true} 
+        loop = {true}
+        // autoplay={{
+        //   delay: 2500,
+        //   disableOnInteraction: false,
+        // }} 
         pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
-        onSlideChange={() => {
-          //슬라이드가 끝나고 실행
-        }}
-        onSwiper={(swiper) => console.log(swiper)}
-         >
+        scrollbar={{ draggable: true }}  
+        
+        
+        breakpoints = {props.view}   
+
+        >
+        
           {
             swiperinfo.map( ( item, index ) => {
-                   return(
-                    <SwiperSlide className={item.cls} key={'sw'+index} style={{ background : item.bg }}>{item.worktitle}</SwiperSlide>
-                   )
+                  return(
+                    <SwiperSlide  id="promotion" className={item.no} key={'sw'+index} style={{backgroundImage:item.bg}}></SwiperSlide>
+                  )
               }
             )
             
           }
-             
-        </Swiper>
+          </Swiper>
+          </div>
       )
   }
   

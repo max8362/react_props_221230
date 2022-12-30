@@ -1,36 +1,122 @@
 {
-  "portfolio" : 
+  "promotion" : 
   [{
-    "worktitle" : "리액트광고웹앱",
-    "worktime" : "4주",
-    "co" : "단독작업",
-    "app" :  ["illust","photoshop","v-code"],
-    "cls" : "react",
-    "bg" : "gray"
+    "no" : "banner1",
+    "bg" : "url(/img/bj1.png)"
   },
   {
-    "worktitle" : "부트스트랩 퍼블리싱",
-    "worktime" : "1주",
-    "co" : "단독작업",
-    "app" :  ["illust","photoshop","v-code"],
-    "cls" : "boot",
-    "bg" : "yellow"
+    "no" : "banner2",
+    "bg" : "url(/img/bj2.png)"
   },
   {
-    "worktitle" : "CMS 그누보드",
-    "worktime" : "4주",
-    "co" : "단독작업",
-    "app" :  ["illust","photoshop","v-code"],
-    "cls" : "sir",
-    "bg" : "green"
+    "no" : "banner3",
+    "bg" : "url(/img/bj3.png)"
+  }
+],
+"flavor" : 
+[{
+  "no" : "menu",
+  "bg" : "url(/img/fccc120ml.png)",
+  "cls": "menu"
+},
+{
+  "no" : "menu",
+  "bg" : "url(/img/fccc473ml.png)",
+  "cls": "menu"
+},
+{
+  "no" : "menu",
+  "bg" : "url(/img/fccff473ml.png)",
+  "cls": "menu"
+},
+{
+  "no" : "menu",
+  "bg" : "url(/img/fcherry120ml.png)",
+  "cls": "menu"
+},
+{
+  "no" : "menu",
+  "bg" : "url(/img/fcherry473ml.png)",
+  "cls": "menu"
+},
+{
+  "no" : "menu",
+  "bg" : "url(/img/fcpd120ml.png)",
+  "cls": "menu"
+},
+{
+  "no" : "menu",
+  "bg" : "url(/img/fcsc473ml.png)",
+  "cls": "menu"
+},
+{
+  "no" : "menu",
+  "bg" : "url(/img/fhb473ml.png)",
+  "cls": "menu"
+},
+{
+  "no" : "menu",
+  "bg" : "url(/img/fmcc473ml.png)",
+  "cls": "menu"
+},
+{
+  "no" : "menu",
+  "bg" : "url(/img/fnspc473ml.png)",
+  "cls": "menu"
+},
+{
+  "no" : "menu",
+  "bg" : "url(/img/fpick.png)",
+  "cls": "menu"
+},
+{
+  "no" : "menu",
+  "bg" : "url(/img/fsnack.png)",
+  "cls": "menu"
+},
+{
+  "no" : "menu",
+  "bg" : "url(/img/ftcc473ml.png)",
+  "cls": "menu"
+},
+{
+  "no" : "menu",
+  "bg" : "url(/img/fv473ml.png)",
+  "cls": "menu"
+}
+
+
+
+],
+
+  "event" : 
+  [{
+    "no" : "pop",
+    "bg" : "url(/img/pop1.png)",
+    "cls": "pop"
   },
   {
-    "worktitle" : "피그마 & 설계",
-    "worktime" : "4주",
-    "co" : "단독작업",
-    "app" : ["illust","photoshop","v-code"],
-    "cls" : "sir",
-    "bg" : "black"
-  }]
+    "no" : "pop",
+    "bg" : "url(/img/pop2.png)",
+    "cls": "pop"
+  },
+  {
+    "no" : "pop",
+    "bg" : "url(/img/pop3.png)",
+    "cls": "pop"
+  },
+  {
+    "no" : "pop",
+    "bg" : "url(/img/pop4.png)",
+    "cls": "pop"
+  },
+  {
+    "no" : "pop",
+    "bg" : "url(/img/pop5.png)",
+    "cls": "pop"
+  }
+]
+
+
 }
 

@@ -2,14 +2,14 @@ import interviewDBlink from '../json/preinterview.json';
 const Preinterview = (props) => {
     
     const interviewjson = interviewDBlink[props.objnm];   
-   
+  
     return(
       
       <section className="section py-5 text-center" id={props.contentid}>
           <h3>{props.title}</h3>
-          <div className="py-5 container-md text-start">
+          <div className="py-5 container-md text-start" >
             <ul>
-               {
+              {
                 interviewjson.map(function(value, index){
                     //this조심할것
                     return(
@@ -20,7 +20,7 @@ const Preinterview = (props) => {
                     )
                 }
                 )
-               }
+              }
             </ul>
           </div>
       </section>

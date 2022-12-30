@@ -47,8 +47,7 @@ function Header(props){
                   fixed-top ">
           <h1 className="mb-0">
             <a href="#top" className="d-block">
-              <Logo></Logo>
-              {/* <img src="./img/logo.svg" className="img-fluid w-100" alt="logo" /> */}
+              <img src="./img/logo-bj.png" className="img-fluid " alt="logo" />
             </a>
           </h1>
           <button className='btn d-md-none' id="allMenu" onClick={ e => {               

@@ -1,15 +1,23 @@
 { "naviDB" : 
 [{
-    "naviText" : "포트폴리오",
-    "naviLink" : "#portfolio"
+    "naviText" : "프로모션",
+    "naviLink" : "#promotion"
   },
   {
-    "naviText" : "인물탐방",
-    "naviLink" : "#me"
+    "naviText" : "공지사항",
+    "naviLink" : "#notice"
+  },
+  {
+    "naviText" : "판매상품",
+    "naviLink" : "#flavor"
                   },
   {
-    "naviText" : "사전인터뷰 및 제안",
-    "naviLink" : "#preInterview"
+    "naviText" : "상품정보",
+    "naviLink" : "#Information"
+                  },                
+  {
+    "naviText" : "이벤트",
+    "naviLink" : "#event"
                   }
   ]
 }

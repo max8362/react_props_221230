@@ -1,19 +1,46 @@
-*{
-    font-family: 'Gothic A1', sans-serif;
-    font-weight: 300;
-    letter-spacing: -0.083em;
+@font-face {
+    font-family: 'PyeongChangPeace-Bold';
+    src: url('../../public/font/PyeongChangPeace-Bold.ttf') format('woff2');
+    font-weight: 300, 700;
+    font-style: normal;
 }
+@font-face {
+    font-family: 'PyeongChangPeace-Bold','PyeongChangPeace-Light';
+    src: url('../../public/font/PyeongChangPeace-Light.ttf') format('woff2');
+    font-weight: 300, 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PyeongChang-Bold';
+    src: url('../../public/font/PyeongChang-Bold.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PyeongChang-Regular';
+    src: url('../../public/font/PyeongChang-Regular.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    
+}
+
 li{
     list-style: none;
 }
 .h100vh{ height: 100vh;}
 
 #root{
+    font-family: 'PyeongChang-Regular';
+    font-weight: 400;
+    
+    // letter-spacing: -0.083em;
     a{
         color:black
     }
     a:hover{
-        color:rgb(227, 96, 73);
+        color: #ffc107;
     }
 
     h1{
@@ -32,12 +59,17 @@ li{
                 transition: 0.5s;
             }
 
-        }
+        }  
 
+    }
+
+    h3{
+        text-align: center!important;
     }
     
 
     #hd{
+        
         background-color: white;
         &.scroll{
             background-color: rgba(0,0,0,.5);
@@ -98,25 +130,56 @@ li{
     }
     .workSection{
         .swiper-wrapper{
-             .swiper-slide{
-                min-height: calc(100vh - 120px);
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-             }
-             .react{
-                background:url(https://img.cjthemarket.com/images/file/display/586/20221122103138241.jpg?RS=1920x500) no-repeat center;
-                background-size: cover;
+            .swiper-slide{
+              
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &:after{
+        content: "";
+        display: block;       
+        height:0;
+        padding-top: 100%;
+        
+    }
+  
+                
+            }
+            .banner1{
+                background:url('../../public/img/bj1.png') no-repeat center;
+                
+                
                 color:white;
                 @media (max-width:768px) {
                     background-image: url(https://img.cjthemarket.com/images/file/display/084/20220901181851256.png?RS=1920x500);
                     
                 }
-             }
-             .boot{
-
-             }
+            }
+            .banner2{
+                background:url('../../public/img/bj2.png') no-repeat center;
+                
+                
+                color:white;
+                @media (max-width:768px) {
+                    background-image: url(https://img.cjthemarket.com/images/file/display/084/20220901181851256.png?RS=1920x500);
+                    
+                }
+            }
+            .banner3{
+                background:url('../../public/img/bj3.png') no-repeat center;
+                
+                
+                color:white;
+                @media (max-width:768px) {
+                    background-image: url(https://img.cjthemarket.com/images/file/display/084/20220901181851256.png?RS=1920x500);
+                    
+                }
+            }
         }
         .swiper-scrollbar-horizontal{
             height: 2px;
@@ -125,10 +188,65 @@ li{
             right:0;
             width:100%;
         }
+
+        .swiper-pagination-bullets{
+            display: none;
+        }
     }
 
-    .section{
-        height: calc(100vh - 120px);
-        min-height:800px;
+    .section {
+        // height: calc(100vh - 120px);
+        min-height:200px;
     }
+    
+
+    .menu {background-size: auto 30%;}
+    .pop {background-size: auto 50%;};
+
+    #promotion{
+     
+    }
+
+    
+}
+
+#root{
+    #promotion{
+    .swiper-wrapper{
+        .swiper-slide{
+
+
+
+background-repeat: no-repeat;
+background-size: auto 100%;
+           
+background-position: center;
+height:100vh;
+
+&:after{
+    content: "";
+    display: none;       
+   
+   
+    
+}
+
+            
+        }
+
+}
+}
+}
+
+@media (min-width:1280px) {
+    #root{
+        #promotion{
+        .swiper-wrapper{
+            .swiper-slide{
+                // background-size: 100% auto;
+            }
+        }
+        }
+    }
+                
 }
